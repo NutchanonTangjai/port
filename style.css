@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap');
+@font-face { font-family: Delicious; src: url('./font/Vonique\ 92_D.otf'); } 
+*{
+    color:white
+}
+body{
+    background-color: black;
+}
+
+.inter{
+    font-family: 'Inter', sans-serif;
+}
+
+#bg1{
+    /* background-image: url('./img/bg1.webp'); */
+    width: 100%;
+
+    position:relative;
+}
+.video {
+    position:absolute;
+    z-index:-2;
+    width:100%;
+    height:100vh;
+    filter:saturate(58%) brightness(38%);
+    overflow:hidden;
+}
+
+.video2 {
+    position:absolute;
+    z-index:-2;
+    width:100%;
+    height:100%;
+    filter:saturate(55%) brightness(25%);
+    overflow:hidden;
+    margin-bottom:0px;
+}
+
+#content{
+    /* height:300px; */
+    padding-top:400px;
+    width: 100%;
+    background: black;
+    position: relative;
+}
+
+#content::before{
+    content: '';
+    width: 100%;
+    height: 300px;
+    top: -300px;
+    z-index: 1;
+    left: 0;
+    background: linear-gradient(to top , black , transparent);
+    position: absolute;
+}
+
+.hideme
+{
+    opacity:0;
+}
+
+#content::after{
+    content: '';
+    width: 100%;
+    height: 300px;
+    bottom: -300px;
+    z-index: 1;
+    left: 0;
+    background: linear-gradient(to bottom , black , transparent);
+    position: absolute;
+}
+
+
+#bg3{
+    /* background-image: url('./img/bg2.jpg'); */
+    width: 100%;
+    /* height: 100vh; */
+    position:relative;
+}
+
+#btndown{
+    opacity: 90%;
+    font-size:21px;
+    position: fixed;
+    z-index: 999;
+    left:50%;
+    bottom:0%;
+    transform:translate(-50%,0%);
+}
+
+.header1{
+    letter-spacing:7px;
+    font-size:26px;
+}
+
+.diver-content{
+    width:100%;
+    height:100vh;
+    display:flex;
+}
+
+.diver{
+    text-align:center;
+    width:100%;
+}
+
+.images{
+    width: 225px;;
+    height: 225px;;
+}
+
+.hr-left::after{
+    content:'';
+    position:absolute;
+    height:500px;
+    width:2px;
+    background:white;
+    left:50%;
+    transform:translate(-50% , 0)
+}
+
+.video-full{
+    width:100%;
+}
+
+@media only screen and (max-width:900px){
+    #content{
+        padding-top:0 !important;
+        padding-bottom:0 !important;
+    }
+    #headercon{
+        margin-top:0vh !important;
+    }
+    .header1{
+        margin-top:16vh !important;
+    }
+    .video-full{
+        width:auto;
+    }
+    
+}
